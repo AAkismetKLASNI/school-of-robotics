@@ -1,0 +1,10 @@
+.main {
+	background-color: #272727;
+	height: calc(100vh - 190px);
+}
+
+.container {
+	max-width: 1440px;
+	margin: 0 auto;
+	width: 100%;
+}

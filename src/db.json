@@ -1,0 +1,17 @@
+{
+	"users": [],
+	"roles": [
+		{
+			"id": "0",
+			"name": "student"
+		},
+		{
+			"id": "1",
+			"name": "guest"
+		}
+	],
+	"courses": [],
+	"posts": [],
+	"comments": [],
+	"sessions": []
+}
