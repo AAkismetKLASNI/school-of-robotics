@@ -1,4 +1,5 @@
 import { H, Button } from '../../ui-components';
+import Robot from '../../assets/img/робот 2.png';
 import styled from './Primary.module.css';
 
 export const PrimaryLayout = () => {
@@ -9,8 +10,10 @@ export const PrimaryLayout = () => {
 					«Я - Академик» <span style={{ color: '#39CADF' }}>путь с 0 до 1</span>
 				</H>
 				<p>Школа программирования и робототехники для детей и подростков</p>
-				<Button btnBlue2>ПОПРОБОВАТЬ БЕСПЛАТНО</Button>
-				<div>
+				<Button btnBlue2 link={true} to="/courses">
+					ПОПРОБОВАТЬ БЕСПЛАТНО
+				</Button>
+				<div className={styled.socialNetwork}>
 					<img
 						src="https://i.postimg.cc/mZSfQ0W8/Group-6.png"
 						border="0"
@@ -28,6 +31,7 @@ export const PrimaryLayout = () => {
 					/>
 				</div>
 			</div>
+			<img className={styled.robotBanner} src={Robot} alt="" />
 		</div>
 	);
 };

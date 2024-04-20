@@ -1,0 +1,30 @@
+.personalPanel {
+	padding: 25px;
+	border-radius: 22px;
+	height: 345px;
+	width: 340px;
+	background-color: #212121;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.personalPanel div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+.personalPanel div span {
+	text-decoration: underline;
+}
+
+.personalPanel button {
+	width: 185px;
+	height: 50px;
+	background-color: #fff;
+	color: #000;
+	border-radius: 10px;
+}

@@ -1,7 +1,7 @@
 .main {
 	background-color: #272727;
 	height: calc(100vh - 190px);
-	padding: 88px 0;
+	padding: 60px 0;
 }
 
 .container {
@@ -9,4 +9,5 @@
 	max-width: 1480px;
 	margin: 0 auto;
 	width: 100%;
+	position: relative;
 }

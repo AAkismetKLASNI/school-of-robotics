@@ -1,3 +1,5 @@
+import { ACTION_TYPE } from '../actions/action-type';
+
 const initialUser = {
 	id: null,
 	firstname: null,
@@ -11,9 +13,8 @@ const initialUser = {
 
 export const userReducer = (state = initialUser, action) => {
 	switch (action.type) {
-		case '':
-			break;
-
+		case ACTION_TYPE.SET_USER:
+			return { ...state, ...action.payload };
 		default:
 			return state;
 	}

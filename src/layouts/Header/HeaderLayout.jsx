@@ -13,8 +13,8 @@ export const HeaderLayout = () => {
 						<NavLink to="/courses">КУРСЫ</NavLink>
 						<NavLink to="/media">МЕДИА</NavLink>
 					</nav>
-					<Button btnBlue1>
-						<NavLink to="/personal-account">ВОЙТИ</NavLink>
+					<Button btnBlue1 link={true} to="/authorization">
+						ВОЙТИ
 					</Button>
 				</div>
 			</div>
