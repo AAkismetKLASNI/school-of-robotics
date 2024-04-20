@@ -1,0 +1,14 @@
+.H1,
+.H1 * {
+	font-size: 64px;
+}
+
+.H2,
+.H2 * {
+	font-size: 40px;
+}
+
+.H3,
+.H3 * {
+	font-size: 36px;
+}

@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { Button } from '../../ui-components';
 import styled from './Header.module.css';
 
 export const HeaderLayout = () => {
@@ -12,9 +13,9 @@ export const HeaderLayout = () => {
 						<NavLink to="/courses">КУРСЫ</NavLink>
 						<NavLink to="/media">МЕДИА</NavLink>
 					</nav>
-					<NavLink to="/personal-account" className={styled.buttonLog}>
-						ВОЙТИ
-					</NavLink>
+					<Button btnBlue1>
+						<NavLink to="/personal-account">ВОЙТИ</NavLink>
+					</Button>
 				</div>
 			</div>
 		</header>

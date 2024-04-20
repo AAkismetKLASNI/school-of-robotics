@@ -1,0 +1,18 @@
+.btnBlue1,
+.btnBlue2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 260px;
+	height: 70px;
+	border-radius: 22px;
+	background-color: #39cadf;
+}
+
+.btnBlue2 {
+	width: 100%;
+}
+
+.btnBlue1:hover {
+	background-color: #3979df;
+}
