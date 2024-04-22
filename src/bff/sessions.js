@@ -1,4 +1,4 @@
-import { addSession } from './api';
+import { addSession, deleteSession, getSession } from './api';
 
 export const sessions = {
 	create: async (user) => {
@@ -7,5 +7,28 @@ export const sessions = {
 		await addSession(hash, user);
 
 		return hash;
+	},
+
+	remove: async (hash) => {
+		const session = await getSession(hash);
+
+		if (!session) {
+			return;
+		}
+
+		deleteSession(session.id);
+	},
+
+	access: async (hash, accessRoles) => {
+		const session = await getSession(hash);
+
+		console.log('hash', hash);
+		console.log('session', session);
+
+		if (!session) {
+			return;
+		}
+
+		return !!session.user && accessRoles.includes(session?.user?.roleId);
 	},
 };

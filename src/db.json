@@ -1,28 +1,53 @@
 {
-	"users": [
-		{
-			"id": "001",
-			"email": "forevernoox@gmail.com",
-			"password": "qwe1234",
-			"telephone": "8-900-900-90-90",
-			"firstname": "Эрик",
-			"lastname": "Саялиев",
-			"gender": "men",
-			"role_id": "0"
-		}
-	],
-	"roles": [
-		{
-			"id": "0",
-			"name": "student"
-		},
-		{
-			"id": "1",
-			"name": "guest"
-		}
-	],
-	"courses": [],
-	"posts": [],
-	"comments": [],
-	"sessions": []
+  "users": [
+    {
+      "id": "001",
+      "email": "forevernoox@gmail.com",
+      "password": "qwe1234",
+      "telephone": "8-900-900-90-90",
+      "firstname": "Эрик",
+      "lastname": "Саялиев",
+      "gender": "men",
+      "role_id": "0"
+    },
+    {
+      "id": "eaa0",
+      "email": "forevernoox1@gmail.com",
+      "password": "qwqw1212",
+      "telephone": null,
+      "firstname": null,
+      "lastname": null,
+      "gender": "men",
+      "role_id": "0"
+    }
+  ],
+  "roles": [
+    {
+      "id": "0",
+      "name": "student"
+    },
+    {
+      "id": "1",
+      "name": "guest"
+    }
+  ],
+  "courses": [],
+  "posts": [],
+  "comments": [],
+  "sessions": [
+    {
+      "id": "2efd",
+      "hash": "0.38970265871008846758627441886346787214279174804688",
+      "user": {
+        "id": "eaa0",
+        "email": "forevernoox1@gmail.com",
+        "password": "qwqw1212",
+        "telephone": null,
+        "firstname": null,
+        "lastname": null,
+        "gender": "men",
+        "roleId": "0"
+      }
+    }
+  ]
 }

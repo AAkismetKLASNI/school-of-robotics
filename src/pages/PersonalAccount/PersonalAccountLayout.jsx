@@ -5,11 +5,11 @@ import {
 } from './components';
 import styled from './PersonalAccount.module.css';
 
-export const PersonalAccountLayout = () => {
+export const PersonalAccountLayout = (userInfo) => {
 	return (
 		<div className={styled.wrapper}>
-			<PersonalOperationsLayout />
-			<PersonalInfoLayout />
+			<PersonalOperationsLayout {...userInfo} />
+			<PersonalInfoLayout {...userInfo} />
 			<PersonalPanelLayout />
 		</div>
 	);

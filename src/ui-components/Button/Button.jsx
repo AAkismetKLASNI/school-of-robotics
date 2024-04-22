@@ -10,11 +10,13 @@ export const Button = ({
 	btnBlue1,
 	btnBlue2,
 	btnOrange1,
+	...props
 }) => {
 	return (
 		<>
 			{link ? (
 				<button
+					{...props}
 					className={cx(styled.btnLink, {
 						[styled['btnBlue1']]: btnBlue1,
 						[styled['btnBlue2']]: btnBlue2,
@@ -25,6 +27,7 @@ export const Button = ({
 				</button>
 			) : (
 				<button
+					{...props}
 					className={
 						check
 							? cx(styled.btnCheck, {

@@ -21,10 +21,25 @@
 	text-decoration: underline;
 }
 
-.personalPanel button {
+.btnHelper,
+.btnLogout {
 	width: 185px;
 	height: 50px;
 	background-color: #fff;
 	color: #000;
 	border-radius: 10px;
+}
+
+.btnLogout {
+	background-color: #ff5252;
+	color: #fff;
+}
+
+.btnLogout:hover {
+	background-color: #ff2e2e;
+}
+
+.btnHelper:hover {
+	background-color: #000;
+	color: #fff;
 }

@@ -1,7 +1,7 @@
+import { RegistrationLayout } from './RegistrationLayout';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
-import { AuthorizationLayout } from './AuthorizationLayout';
 import { useRequestServer } from '../../utils';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
@@ -22,15 +22,19 @@ const authorizationSceme = yup.object().shape({
 		.min('6', 'Минимум 6 символов для пароля')
 		.max('25', 'Максимум 25 символов для пароля')
 		.required('Введите пароль'),
+	passcheck: yup
+		.string()
+		.required('Введите повтор пароля')
+		.oneOf([yup.ref('password'), null], 'Пароли не совпадают'),
 });
 
-export const AuthorizationContainer = () => {
+export const RegistrationContainer = () => {
 	const {
 		register,
 		handleSubmit,
 		formState: { errors },
 	} = useForm({
-		defaultValues: { email: '', password: '' },
+		defaultValues: { email: '', password: '', passcheck: '' },
 		resolver: yupResolver(authorizationSceme),
 	});
 
@@ -41,17 +45,22 @@ export const AuthorizationContainer = () => {
 	const dispatch = useDispatch();
 	const [serverError, setServerError] = useState(null);
 
-	const formError = errors?.email?.message || errors?.password?.message;
+	const formError =
+		errors?.email?.message ||
+		errors?.password?.message ||
+		errors?.passcheck?.message;
 
 	const error = formError || serverError;
 
 	const onSubmit = ({ email, password }) => {
-		requestServer('authorize', email, password).then(({ error, res }) => {
+		requestServer('registration', email, password).then(({ error, res }) => {
 			setServerError(error);
 
 			if (error) {
 				return;
 			}
+
+			console.log('readyUser', res);
 
 			dispatch(setUser(res));
 			sessionStorage.setItem('user', JSON.stringify(res));
@@ -61,11 +70,11 @@ export const AuthorizationContainer = () => {
 	};
 
 	return (
-		<AuthorizationLayout
+		<RegistrationLayout
 			register={register}
 			handleSubmit={handleSubmit}
-			formError={formError}
 			error={error}
+			formError={formError}
 			onSubmit={onSubmit}
 		/>
 	);

@@ -3,6 +3,7 @@ import {
 	PrimaryLayout,
 	AuthorizationContainer,
 	PersonalAccountContainer,
+	RegistrationContainer,
 } from '../../pages';
 import styled from './Main.module.css';
 
@@ -16,10 +17,14 @@ export const MainLayout = () => {
 					<Route path="/courses" element={<div>Курсы</div>} />
 					<Route path="/media" element={<div>Медиа</div>} />
 					<Route path="/authorization" element={<AuthorizationContainer />} />
-					<Route path="/registration" element={<div>Регистрация</div>} />
+					<Route path="/registration" element={<RegistrationContainer />} />
 					<Route
 						path="/personal-account"
 						element={<PersonalAccountContainer />}
+					/>
+					<Route
+						path="*"
+						element={<div>Такой страницы не существует :(</div>}
 					/>
 				</Routes>
 			</div>
