@@ -26,8 +26,8 @@
 	display: flex;
 }
 
-.manGender,
-.womanGender {
+.menGender,
+.womenGender {
 	background-color: #303030;
 	height: 60px;
 	width: 135px;
@@ -37,12 +37,12 @@
 	cursor: pointer;
 }
 
-.manGender {
+.menGender {
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 }
 
-.womanGender {
+.womenGender {
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
 }

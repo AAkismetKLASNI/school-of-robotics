@@ -60,8 +60,6 @@ export const RegistrationContainer = () => {
 				return;
 			}
 
-			console.log('readyUser', res);
-
 			dispatch(setUser(res));
 			sessionStorage.setItem('user', JSON.stringify(res));
 

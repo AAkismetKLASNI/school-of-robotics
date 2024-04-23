@@ -1,18 +1,23 @@
 import { useSelector } from 'react-redux';
 import { userSelector } from '../../../../selectors';
 import styled from './PersonalInfo.module.css';
+import { useState } from 'react';
 
 export const PersonalInfoLayout = ({
 	firstNameRef,
 	lastNameRef,
 	telephoneRef,
-	genderRef,
 	passwordRef,
 	emailRef,
+	setPersonalGender,
+	personalGender,
 }) => {
+	const [toggleToChangePassword, setToggleToChangePassword] = useState(false);
+	const [toggleToChangeEmail, setToggleToChangeEmail] = useState(false);
+
 	const user = useSelector(userSelector);
 
-	const { firstname, lastname, password, telephone, gender, email } = user;
+	const { firstname, lastname, password, telephone, email } = user;
 
 	return (
 		<div className={styled.personalInfo}>
@@ -45,41 +50,60 @@ export const PersonalInfoLayout = ({
 			</div>
 			<div className={styled.personalField}>
 				<span className={styled.personalNameField}>Пол</span>
-				{gender === 'men' ? (
-					<div className={styled.toggleGender}>
-						<div className={`${styled.manGender} ${styled.activeGender}`}>
-							Мужской
-						</div>
-						<div className={styled.womanGender}>Женский</div>
+				<div className={styled.toggleGender}>
+					<div
+						className={
+							personalGender === 'men'
+								? `${styled.menGender} ${styled.activeGender}`
+								: styled.menGender
+						}
+						onClick={() => setPersonalGender('men')}
+					>
+						Мужской
 					</div>
-				) : (
-					<div className={styled.toggleGender}>
-						<div className={styled.manGender}>Мужской</div>
-						<div className={`${styled.womanGender} ${styled.activeGender}`}>
-							Женский
-						</div>
+					<div
+						className={
+							personalGender === 'women'
+								? `${styled.womenGender} ${styled.activeGender}`
+								: styled.womenGender
+						}
+						onClick={() => setPersonalGender('women')}
+					>
+						Женский
 					</div>
-				)}
+				</div>
 			</div>
 			<div className={styled.personalField}>
 				<span className={styled.personalNameField}>Пароль</span>
 				<input
 					type="password"
-					className={styled.closeField}
+					className={
+						toggleToChangePassword ? styled.openField : styled.closeField
+					}
 					defaultValue={password}
 					ref={passwordRef}
 				/>
-				<span className={styled.personalChangeData}>изменить</span>
+				<span
+					className={styled.personalChangeData}
+					onClick={() => setToggleToChangePassword(!toggleToChangePassword)}
+				>
+					{toggleToChangePassword ? 'закрыть' : 'открыть'}
+				</span>
 			</div>
 			<div className={styled.personalField}>
 				<span className={styled.personalNameField}>Email</span>
 				<input
 					type="email"
-					className={styled.closeField}
+					className={toggleToChangeEmail ? styled.openField : styled.closeField}
 					defaultValue={email}
 					ref={emailRef}
 				/>
-				<span className={styled.personalChangeData}>изменить</span>
+				<span
+					className={styled.personalChangeData}
+					onClick={() => setToggleToChangeEmail(!toggleToChangeEmail)}
+				>
+					{toggleToChangeEmail ? 'закрыть' : 'открыть'}
+				</span>
 			</div>
 		</div>
 	);

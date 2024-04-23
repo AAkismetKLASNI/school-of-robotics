@@ -8,4 +8,5 @@ export const fetchChangeUserAsync =
 			}
 
 			dispatch(setUser(res));
+			sessionStorage.setItem('user', JSON.stringify({ ...res }));
 		});

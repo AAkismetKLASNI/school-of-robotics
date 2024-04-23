@@ -9,7 +9,6 @@ export const PersonalOperationsLayout = ({
 	firstNameRef,
 	lastNameRef,
 	telephoneRef,
-	genderRef,
 	passwordRef,
 	emailRef,
 }) => {

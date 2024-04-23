@@ -4,7 +4,7 @@ import styled from './Primary.module.css';
 
 export const PrimaryLayout = () => {
 	return (
-		<div>
+		<div className={styled.main}>
 			<div className={styled.content}>
 				<H>
 					«Я - Академик» <span style={{ color: '#39CADF' }}>путь с 0 до 1</span>

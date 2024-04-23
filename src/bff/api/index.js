@@ -4,3 +4,4 @@ export * from './delete-session';
 export * from './get-session';
 export * from './add-user';
 export * from './patch-user';
+export * from './patch-session';

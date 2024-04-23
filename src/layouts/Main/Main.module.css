@@ -1,6 +1,6 @@
 .main {
 	background-color: #272727;
-	height: calc(100vh - 190px);
+	/* height: calc(100vh - 190px); */
 	padding: 60px 0;
 }
 

@@ -4,6 +4,7 @@ import {
 	AuthorizationContainer,
 	PersonalAccountContainer,
 	RegistrationContainer,
+	AboutUsLayout,
 } from '../../pages';
 import styled from './Main.module.css';
 
@@ -13,7 +14,7 @@ export const MainLayout = () => {
 			<div className={styled.container}>
 				<Routes>
 					<Route path="/" element={<PrimaryLayout />} />
-					<Route path="/about-us" element={<div>О нас</div>} />
+					<Route path="/about-us" element={<AboutUsLayout />} />
 					<Route path="/courses" element={<div>Курсы</div>} />
 					<Route path="/media" element={<div>Медиа</div>} />
 					<Route path="/authorization" element={<AuthorizationContainer />} />

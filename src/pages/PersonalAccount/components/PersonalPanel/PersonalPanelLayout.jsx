@@ -1,7 +1,6 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useRequestServer } from '../../../../utils';
 import { logoutAsync } from '../../../../actions';
-import { sessionSelector } from '../../../../selectors';
 import { useNavigate } from 'react-router-dom';
 import styled from './PersonalPanel.module.css';
 
@@ -9,8 +8,6 @@ export const PersonalPanelLayout = () => {
 	const requestServer = useRequestServer();
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
-
-	const session = useSelector(sessionSelector);
 
 	const onLogout = () => {
 		dispatch(logoutAsync(requestServer, navigate));

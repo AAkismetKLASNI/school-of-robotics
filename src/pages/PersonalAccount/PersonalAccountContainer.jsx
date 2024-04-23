@@ -2,15 +2,18 @@ import { PersonalAccountLayout } from './PersonalAccountLayout';
 import { useRequestServer } from '../../utils';
 import { useEffect, useState, useRef } from 'react';
 import { useSelector } from 'react-redux';
+import { userGenderSelector } from '../../selectors';
 import { sessionSelector } from '../../selectors';
 
 export const PersonalAccountContainer = () => {
+	const genderUser = useSelector(userGenderSelector);
+
+	const [personalGender, setPersonalGender] = useState('men');
+
 	const requestServer = useRequestServer();
 
 	const [errorLogging, setErrorLogging] = useState(null);
 	const session = useSelector(sessionSelector);
-
-	console.log(session);
 
 	useEffect(() => {
 		requestServer('checkingLogging').then(({ error }) => {
@@ -26,7 +29,6 @@ export const PersonalAccountContainer = () => {
 	const firstNameRef = useRef(null);
 	const lastNameRef = useRef(null);
 	const telephoneRef = useRef(null);
-	const genderRef = useRef(null);
 	const passwordRef = useRef(null);
 	const emailRef = useRef(null);
 
@@ -34,9 +36,10 @@ export const PersonalAccountContainer = () => {
 		firstNameRef,
 		lastNameRef,
 		telephoneRef,
-		genderRef,
 		passwordRef,
 		emailRef,
+		setPersonalGender,
+		personalGender,
 	};
 
 	return errorLogging ? (
