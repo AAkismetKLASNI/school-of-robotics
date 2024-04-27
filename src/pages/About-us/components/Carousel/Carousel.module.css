@@ -3,6 +3,7 @@
 	height: 478px;
 	display: flex;
 	align-items: center;
+	position: relative;
 }
 
 .window {
@@ -14,8 +15,24 @@
 .allPagesContainer {
 	display: flex;
 	height: 100%;
+	transition: all 0.3s;
 }
 
 .arrow {
+	z-index: 20;
+	position: absolute;
 	cursor: pointer;
+	transition: all 0.12s;
+}
+
+.arrow:hover {
+	opacity: 0.7;
+}
+
+.arrowRight {
+	right: 30px;
+}
+
+.arrowLeft {
+	left: 30px;
 }

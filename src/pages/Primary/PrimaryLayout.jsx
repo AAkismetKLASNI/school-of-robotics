@@ -10,7 +10,7 @@ export const PrimaryLayout = () => {
 					«Я - Академик» <span style={{ color: '#39CADF' }}>путь с 0 до 1</span>
 				</H>
 				<p>Школа программирования и робототехники для детей и подростков</p>
-				<Button btnBlue2 link={true} to="/courses">
+				<Button btnBlue2 link="/courses">
 					ПОПРОБОВАТЬ БЕСПЛАТНО
 				</Button>
 				<div className={styled.socialNetwork}>

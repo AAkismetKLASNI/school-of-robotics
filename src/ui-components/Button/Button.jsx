@@ -4,47 +4,29 @@ import styled from './Button.module.css';
 
 export const Button = ({
 	children,
-	link = false,
-	to,
+	link = '',
 	check,
 	btnBlue1,
 	btnBlue2,
 	btnOrange1,
+	btnOrange2,
 	...props
 }) => {
 	return (
 		<>
-			{link ? (
-				<button
-					{...props}
-					className={cx(styled.btnLink, {
-						[styled['btnBlue1']]: btnBlue1,
-						[styled['btnBlue2']]: btnBlue2,
-						[styled['btnOrange1']]: btnOrange1,
-					})}
-				>
-					<NavLink to={to}>{children}</NavLink>
-				</button>
-			) : (
-				<button
-					{...props}
-					className={
-						check
-							? cx(styled.btnCheck, {
-									[styled['btnBlue1']]: btnBlue1,
-									[styled['btnBlue2']]: btnBlue2,
-									[styled['btnOrange1']]: btnOrange1,
-								})
-							: cx(styled.btn, {
-									[styled['btnBlue1']]: btnBlue1,
-									[styled['btnBlue2']]: btnBlue2,
-									[styled['btnOrange1']]: btnOrange1,
-								})
-					}
-				>
-					{children}
-				</button>
-			)}
+			<button
+				{...props}
+				className={cx(styled.btn, {
+					[styled['btnBlue1']]: btnBlue1,
+					[styled['btnBlue2']]: btnBlue2,
+					[styled['btnOrange1']]: btnOrange1,
+					[styled['btnOrange2']]: btnOrange2,
+					[styled['btnLink']]: link,
+					[styled['btnCheck']]: check,
+				})}
+			>
+				{link ? <NavLink to={link}>{children}</NavLink> : <>{children}</>}
+			</button>
 		</>
 	);
 };

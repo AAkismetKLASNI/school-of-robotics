@@ -1,10 +1,14 @@
-import { HeaderLayout, MainLayout } from './layouts';
+import { HeaderLayout, MainLayout, FooterLayout } from './layouts';
 import { useLayoutEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { setUser } from './actions';
+import { useMatch } from 'react-router-dom';
 import styled from './App.module.css';
 
 export const App = () => {
+	const test = useMatch('/about-us');
+	console.log(test);
+
 	const dispatch = useDispatch();
 
 	useLayoutEffect(() => {
@@ -21,8 +25,18 @@ export const App = () => {
 
 	return (
 		<div className={styled.content}>
-			<HeaderLayout />
-			<MainLayout />
+			{test ? (
+				<>
+					<HeaderLayout />
+					<MainLayout />
+					<FooterLayout />
+				</>
+			) : (
+				<>
+					<HeaderLayout />
+					<MainLayout />
+				</>
+			)}
 		</div>
 	);
 };

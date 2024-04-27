@@ -6,12 +6,12 @@ import {
 	RegistrationContainer,
 	AboutUsLayout,
 } from '../../pages';
-import styled from './Main.module.css';
+import { Container } from '../../ui-components';
 
 export const MainLayout = () => {
 	return (
-		<main className={styled.main}>
-			<div className={styled.container}>
+		<main>
+			<Container>
 				<Routes>
 					<Route path="/" element={<PrimaryLayout />} />
 					<Route path="/about-us" element={<AboutUsLayout />} />
@@ -28,7 +28,7 @@ export const MainLayout = () => {
 						element={<div>Такой страницы не существует :(</div>}
 					/>
 				</Routes>
-			</div>
+			</Container>
 		</main>
 	);
 };

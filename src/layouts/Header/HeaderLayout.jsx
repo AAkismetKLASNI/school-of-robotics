@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Button } from '../../ui-components';
+import { Button, Container } from '../../ui-components';
 import { useSelector } from 'react-redux';
 import { roleIdSelector } from '../../selectors';
 import styled from './Header.module.css';
@@ -10,7 +10,7 @@ export const HeaderLayout = () => {
 
 	return (
 		<header className={styled.header}>
-			<div className={styled.container}>
+			<Container>
 				<div className={styled.wrapper}>
 					<nav>
 						<NavLink to="/">ГЛАВНАЯ</NavLink>
@@ -19,16 +19,16 @@ export const HeaderLayout = () => {
 						<NavLink to="/media">МЕДИА</NavLink>
 					</nav>
 					{roleId === ROLES.GUEST ? (
-						<Button btnBlue1 link={true} to="/authorization">
+						<Button btnBlue1 link="/authorization">
 							ВОЙТИ
 						</Button>
 					) : (
-						<Button btnBlue1 link={true} to="/personal-account">
+						<Button btnBlue1 link="/personal-account">
 							ЛИЧНЫЙ КАБИНЕТ
 						</Button>
 					)}
 				</div>
-			</div>
+			</Container>
 		</header>
 	);
 };
