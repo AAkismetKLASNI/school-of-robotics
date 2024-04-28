@@ -47,11 +47,6 @@
 	flex-direction: column;
 }
 
-.carouselContent span {
-	font-size: 40px;
-	color: #39cadf;
-}
-
 .item2 {
 	background-color: rgb(255, 167, 167);
 }

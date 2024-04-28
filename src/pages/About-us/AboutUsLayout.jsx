@@ -23,7 +23,9 @@ export const AboutUsLayout = () => {
 						<div className={styled.carouselContentWrapper}>
 							<div className={styled.carouselContent}>
 								<H H2>СТАНЬ ЭКСПЕРТОМ В ОБЛАСТИ РОБОТОТЕХНИКИ</H>
-								<span>для детей (7-14 лет)</span>
+								<H H3 blue>
+									для детей (7-14 лет)
+								</H>
 							</div>
 							<Button link="/courses" btnOrange2>
 								ПЕРЕЙТИ НА КУРС
@@ -44,7 +46,9 @@ export const AboutUsLayout = () => {
 						<div className={styled.carouselContentWrapper}>
 							<div className={styled.carouselContent}>
 								<H H2>СТАНЬ ЭКСПЕРТОМ В ОБЛАСТИ ПРОГРАММИРОВАНИЯ</H>
-								<span>для подростков (14-17 лет) </span>
+								<H H3 blue>
+									для подростков (14-17 лет)
+								</H>
 							</div>
 							<Button link="/courses" btnOrange2>
 								ПЕРЕЙТИ НА КУРС

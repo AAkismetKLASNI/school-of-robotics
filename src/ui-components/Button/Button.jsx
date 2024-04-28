@@ -10,6 +10,7 @@ export const Button = ({
 	btnBlue2,
 	btnOrange1,
 	btnOrange2,
+	btnWhite1,
 	...props
 }) => {
 	return (
@@ -21,6 +22,7 @@ export const Button = ({
 					[styled['btnBlue2']]: btnBlue2,
 					[styled['btnOrange1']]: btnOrange1,
 					[styled['btnOrange2']]: btnOrange2,
+					[styled['btnWhite1']]: btnWhite1,
 					[styled['btnLink']]: link,
 					[styled['btnCheck']]: check,
 				})}

@@ -4,6 +4,7 @@ import {
 	AuthorizationContainer,
 	PersonalAccountContainer,
 	RegistrationContainer,
+	CoursesContainer,
 	AboutUsLayout,
 } from '../../pages';
 import { Container } from '../../ui-components';
@@ -15,7 +16,7 @@ export const MainLayout = () => {
 				<Routes>
 					<Route path="/" element={<PrimaryLayout />} />
 					<Route path="/about-us" element={<AboutUsLayout />} />
-					<Route path="/courses" element={<div>Курсы</div>} />
+					<Route path="/courses" element={<CoursesContainer />} />
 					<Route path="/media" element={<div>Медиа</div>} />
 					<Route path="/authorization" element={<AuthorizationContainer />} />
 					<Route path="/registration" element={<RegistrationContainer />} />
