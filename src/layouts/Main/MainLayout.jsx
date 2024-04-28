@@ -6,6 +6,7 @@ import {
 	RegistrationContainer,
 	CoursesContainer,
 	AboutUsLayout,
+	MediaLayout,
 } from '../../pages';
 import { Container } from '../../ui-components';
 
@@ -17,7 +18,7 @@ export const MainLayout = () => {
 					<Route path="/" element={<PrimaryLayout />} />
 					<Route path="/about-us" element={<AboutUsLayout />} />
 					<Route path="/courses" element={<CoursesContainer />} />
-					<Route path="/media" element={<div>Медиа</div>} />
+					<Route path="/media" element={<MediaLayout />} />
 					<Route path="/authorization" element={<AuthorizationContainer />} />
 					<Route path="/registration" element={<RegistrationContainer />} />
 					<Route
