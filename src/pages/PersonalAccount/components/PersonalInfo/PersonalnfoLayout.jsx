@@ -19,6 +19,8 @@ export const PersonalInfoLayout = ({
 
 	const { firstname, lastname, password, telephone, email } = user;
 
+	console.log(user);
+
 	return (
 		<div className={styled.personalInfo}>
 			<div className={styled.personalField}>

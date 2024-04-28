@@ -22,6 +22,8 @@ export const sessions = {
 	access: async (hash, accessRoles) => {
 		const session = await getSession(hash);
 
+		console.log('session', hash);
+
 		if (!session) {
 			return;
 		}

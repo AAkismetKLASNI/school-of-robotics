@@ -4,6 +4,7 @@ import {
 	checkingLogging,
 	registration,
 	editUser,
+	fetchCourses,
 } from './operations';
 
 export const server = {
@@ -12,4 +13,5 @@ export const server = {
 	logout,
 	checkingLogging,
 	editUser,
+	fetchCourses,
 };

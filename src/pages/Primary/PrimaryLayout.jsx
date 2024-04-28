@@ -1,5 +1,4 @@
 import { H, Button } from '../../ui-components';
-import Robot from '../../assets/img/робот 2.png';
 import styled from './Primary.module.css';
 
 export const PrimaryLayout = () => {
@@ -31,7 +30,12 @@ export const PrimaryLayout = () => {
 					/>
 				</div>
 			</div>
-			<img className={styled.robotBanner} src={Robot} alt="" />
+
+			<img
+				className={styled.robotBanner}
+				src="https://i.postimg.cc/MTVK6sQD/2.png"
+				alt=""
+			/>
 		</div>
 	);
 };
