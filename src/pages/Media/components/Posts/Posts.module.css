@@ -1,0 +1,42 @@
+.postContainer {
+	display: flex;
+	justify-content: space-between;
+}
+
+.postItem {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	border-radius: 44px;
+	width: 405px;
+	height: 475px;
+	background-color: #212121;
+}
+
+.postItemContent {
+	position: relative;
+}
+
+.postItemImg {
+	width: 100%;
+	filter: brightness(30%);
+}
+
+.postItemTitle {
+	font-size: 36px;
+	width: 310px;
+	position: absolute;
+	top: calc(50% - 50px);
+	left: calc(50% - 130px);
+	text-decoration: underline;
+}
+
+.postPanel {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 30px;
+}
+
+.postPanel img {
+	cursor: pointer;
+}

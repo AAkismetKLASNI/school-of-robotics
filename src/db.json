@@ -1,13 +1,13 @@
 {
   "users": [
     {
-      "id": "001",
+      "id": "b8b8",
       "email": "forevernoox@gmail.com",
-      "password": "erikgod",
-      "telephone": "8-999-666-99-66",
-      "firstname": "wGodWgod",
-      "lastname": "wGodWgod",
-      "gender": "women",
+      "password": "qwe123",
+      "telephone": null,
+      "firstname": null,
+      "lastname": null,
+      "gender": "men",
       "role_id": "0"
     }
   ],
@@ -64,5 +64,20 @@
   ],
   "posts": [],
   "comments": [],
-  "sessions": []
+  "sessions": [
+    {
+      "id": "997c",
+      "hash": "0.19420753770119736358878981263842433691024780273438",
+      "user": {
+        "id": "b8b8",
+        "email": "forevernoox@gmail.com",
+        "password": "qwe123",
+        "telephone": null,
+        "firstname": null,
+        "lastname": null,
+        "gender": "men",
+        "roleId": "0"
+      }
+    }
+  ]
 }
