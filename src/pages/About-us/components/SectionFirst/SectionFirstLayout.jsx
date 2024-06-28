@@ -21,11 +21,7 @@ export const SectionFirstLayout = () => {
 					<div className={styled.rigthPartItem}>
 						<div className={styled.rigthPartItemContent}>
 							<span>+95%</span>
-							<img
-								src="https://i.postimg.cc/SRs4twgR/Vector.png"
-								border="0"
-								alt="Vector"
-							/>
+							<img src="https://i.postimg.cc/rFDcG2dY/Vector-1.png" border="0" alt="Vector" />
 						</div>
 						<span>пользователей остались довольны</span>
 					</div>
